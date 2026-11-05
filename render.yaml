@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: option-radar
+    runtime: docker
+    plan: free           # sleeps after 15 min without requests: add a pinger (see README) to keep it awake
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: PROVIDER
+        value: yahoo
+      - key: ACCESS_PASSWORD
+        sync: false      # you will be asked for it in the dashboard
+      - key: PUBLIC_URL
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false

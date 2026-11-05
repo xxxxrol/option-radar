@@ -1,0 +1,16 @@
+{
+  "name": "option-radar",
+  "version": "1.0.0",
+  "description": "Arabic options momentum scanner for large-cap US stocks (Yahoo Finance data, delayed ~15 min)",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "PROVIDER=demo node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "yahoo-finance2": "4.0.5"
+  }
+}
